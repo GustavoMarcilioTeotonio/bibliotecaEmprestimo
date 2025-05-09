@@ -1,6 +1,8 @@
+
 package com.senai.bibliotecaemprestimo.models;
 
 import com.senai.bibliotecaemprestimo.dtos.AdminDTO;
+import com.senai.bibliotecaemprestimo.dtos.EstudanteDTO;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -14,7 +16,7 @@ public class Admin {
     private String usuario;
     private String senha;
 
-    public Admin () {
+    public Admin() {
 
     }
 
@@ -26,7 +28,8 @@ public class Admin {
 
     public Admin (AdminDTO adminDTO) {
         this.id = adminDTO.getId();
-
-
+        this.usuario = adminDTO.getUsuario();
+        this.senha = adminDTO.getSenha();
     }
 }
+

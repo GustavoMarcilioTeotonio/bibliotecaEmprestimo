@@ -4,6 +4,8 @@ import com.senai.bibliotecaemprestimo.dtos.EstudanteDTO;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 @Entity
 @Table(name = "estudantes")
@@ -32,6 +34,13 @@ public class Estudante {
         this.matricula = estudanteDTO.getMatricula();
         this.numero = estudanteDTO.getNumero();
     }
+
+    @OneToMany(mappedBy = "estudante")
+    private List<Emprestimo> emprestimos;
+
+    @OneToMany(mappedBy = "estudante")
+    private List<Multa> multas;
+
 
 
 }
