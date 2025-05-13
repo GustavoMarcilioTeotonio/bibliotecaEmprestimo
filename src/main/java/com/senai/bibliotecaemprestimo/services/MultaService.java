@@ -28,6 +28,9 @@ public class MultaService {
         multa.setDiasAtraso(multaDTO.getDiasAtraso());
         multa.setDataMulta(multaDTO.getDataMulta());
         multa.setPaga(multaDTO.getPaga());
+        multa.setEmprestimo(multaDTO.getEmprestimo());
+        multa.setEstudante(multaDTO.getEstudante());
+        multa.setLivro(multaDTO.getLivro());
         return multa;
     }
 
@@ -39,6 +42,9 @@ public class MultaService {
         multaDTO.setDiasAtraso(multa.getDiasAtraso());
         multaDTO.setDataMulta(multa.getDataMulta());
         multaDTO.setPaga(multa.getPaga());
+        multaDTO.setEmprestimo(multa.getEmprestimo());
+        multaDTO.setEstudante(multa.getEstudante());
+        multaDTO.setLivro(multa.getLivro());
         return multaDTO;
     }
     public Multa buscarMultaPorId(Long id) {

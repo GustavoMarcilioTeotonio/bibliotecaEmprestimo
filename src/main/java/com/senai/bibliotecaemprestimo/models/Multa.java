@@ -44,8 +44,12 @@ public class Multa {
     private Emprestimo emprestimo;
 
     @ManyToOne
+    @JoinColumn(name = "livro_id")
     private Estudante estudante;
 
+
+
     @ManyToOne
+    @JoinColumn(name = "estudante_id")
     private Livro livro;
 }

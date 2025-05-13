@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/emprestimos")
 public class EmprestimoController {
@@ -39,4 +41,6 @@ public class EmprestimoController {
         emprestimoService.deletarEmprestimo(emprestimoDTO.getId());
         return ResponseEntity.noContent().build();
     }
+
+
 }
