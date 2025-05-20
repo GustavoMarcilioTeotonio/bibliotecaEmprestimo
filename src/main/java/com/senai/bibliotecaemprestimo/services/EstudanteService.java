@@ -6,6 +6,8 @@ import com.senai.bibliotecaemprestimo.repositories.EstudanteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 import static java.util.Objects.isNull;
 
 @Service
@@ -41,6 +43,10 @@ public class EstudanteService {
     }
     public Estudante buscarEstudantePorId(Long id) {
         return estudanteRepository.findById(id).orElseThrow(() ->new IllegalArgumentException("Estudante não encontrado"));
+    }
+
+    public List<Estudante> buscarTodosEstudantes() {
+        return estudanteRepository.findAll();
     }
 
 

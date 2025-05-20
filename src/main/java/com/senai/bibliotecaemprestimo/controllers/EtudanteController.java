@@ -7,8 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/api/estudantes")
+
 public class EtudanteController {
 
 
@@ -17,6 +21,7 @@ public class EtudanteController {
 
     @GetMapping("/{id}")
     public ResponseEntity<EstudanteDTO> buscarEstudantePorId(@PathVariable Long id) {
+        System.out.println("Buscando estudante com ID: " + id);
         Estudante estudante = estudanteService.buscarEstudantePorId(id);
         return ResponseEntity.ok(estudanteService.converterEstudanteParaEstudanteDTO(estudante));
 
@@ -40,4 +45,10 @@ public class EtudanteController {
         estudanteService.deletarEstudante(estudanteDTO.getId());
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping
+    public List<Estudante> getAllCategories() {
+        return estudanteService.buscarTodosEstudantes();
+    }
+
 }
