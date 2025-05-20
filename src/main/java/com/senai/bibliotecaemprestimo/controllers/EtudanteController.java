@@ -40,9 +40,9 @@ public class EtudanteController {
 
     }
 
-    @DeleteMapping()
-    public ResponseEntity<Void> deleteEstudante(@RequestBody EstudanteDTO estudanteDTO) {
-        estudanteService.deletarEstudante(estudanteDTO.getId());
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteEstudante(@PathVariable Long id) {
+        estudanteService.deletarEstudante(id);
         return ResponseEntity.noContent().build();
     }
 
