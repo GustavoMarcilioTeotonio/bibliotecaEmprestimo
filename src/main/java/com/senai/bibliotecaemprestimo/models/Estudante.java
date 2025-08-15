@@ -15,31 +15,30 @@ public class Estudante {
     private Long id;
     private String nome;
     private String matricula;
-    private String numero;
+    private String serie;
+    private String telefone;
 
     public Estudante() {
 
     }
 
-    public Estudante (Long id, String nome, String matricula, String numero) {
+    public Estudante (Long id, String nome, String matricula, String telefone,  String serie) {
         this.id = id;
         this.nome = nome;
         this.matricula = matricula;
-        this.numero = numero;
+        this.telefone = telefone;
+        this.serie = serie;
     }
 
     public Estudante (EstudanteDTO estudanteDTO) {
         this.id = estudanteDTO.getId();
         this.nome = estudanteDTO.getNome();
         this.matricula = estudanteDTO.getMatricula();
-        this.numero = estudanteDTO.getNumero();
+        this.telefone = estudanteDTO.getTelefone();
+        this.serie = estudanteDTO.getSerie();
     }
 
-    @OneToMany(mappedBy = "estudante")
-    private List<Emprestimo> emprestimos;
 
-    @OneToMany(mappedBy = "estudante")
-    private List<Multa> multas;
 
 
 

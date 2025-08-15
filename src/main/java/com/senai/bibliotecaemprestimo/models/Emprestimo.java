@@ -16,34 +16,20 @@ public class Emprestimo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Date dataEmprestimo;
-    private Date dataDevolucao;
 
     public Emprestimo() {
 
     }
 
-    public Emprestimo(Long id, Date dataEmprestimo, Date dataDevolucao) {
+    public Emprestimo(Long id, Date dataEmprestimo) {
         this.id = id;
         this.dataEmprestimo = dataEmprestimo;
-        this.dataDevolucao = dataDevolucao;
     }
 
     public Emprestimo(EmprestimoDTO emprestimoDTO) {
         this.id = emprestimoDTO.getId();
         this.dataEmprestimo = emprestimoDTO.getDataEmprestimo();
-        this.dataDevolucao = emprestimoDTO.getDataDevolucao();
     }
 
-    @ManyToOne
-    @JsonIgnoreProperties("emprestimos")
-    @JoinColumn(name = "estudante_id")
-    private Estudante estudante;
 
-    @ManyToOne
-    @JsonIgnoreProperties("emprestimos")
-    @JoinColumn(name = "livro_id")
-    private Livro livro;
-
-    @OneToOne(mappedBy = "emprestimo", cascade = CascadeType.ALL)
-    private Multa multa;
 }

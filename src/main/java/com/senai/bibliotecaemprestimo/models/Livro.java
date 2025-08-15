@@ -29,11 +29,6 @@ public class Livro {
         this.nome = livroDTO.getNome();
     }
 
-    @OneToMany(mappedBy = "livro")
-    private List<Emprestimo> emprestimos;
-
-    @OneToMany(mappedBy = "livro")
-    private List<Multa> multas;
 
 
 }

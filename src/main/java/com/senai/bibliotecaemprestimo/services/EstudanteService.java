@@ -25,10 +25,11 @@ public class EstudanteService {
 
     private Estudante converterEstudanteDTOParaEstudante (EstudanteDTO estudanteDTO) {
         Estudante estudante = new Estudante(estudanteDTO);
-        estudante.setId(estudanteDTO.getId());
+        //estudante.setId(estudanteDTO.getId());
         estudante.setNome(estudanteDTO.getNome());
         estudante.setMatricula(estudanteDTO.getMatricula());
-        estudante.setNumero(estudanteDTO.getNumero());
+        estudante.setTelefone(estudanteDTO.getTelefone());
+        estudante.setSerie(estudanteDTO.getSerie());
         return estudante;
     }
 
@@ -38,7 +39,8 @@ public class EstudanteService {
         estudanteDTO.setId(estudante.getId());
         estudanteDTO.setNome(estudante.getNome());
         estudanteDTO.setMatricula(estudante.getMatricula());
-        estudanteDTO.setNumero(estudante.getNumero());
+        estudanteDTO.setTelefone(estudante.getTelefone());
+        estudanteDTO.setSerie(estudante.getSerie());
         return estudanteDTO;
     }
     public Estudante buscarEstudantePorId(Long id) {

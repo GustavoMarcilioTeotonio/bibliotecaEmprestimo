@@ -12,9 +12,7 @@ public class EmprestimoDTO {
 
     private Long id;
     private Date dataEmprestimo;
-    private Date dataDevolucao;
-    private Estudante estudante;
-    private Livro livro;
+
 
     public EmprestimoDTO() {
 
@@ -23,6 +21,5 @@ public class EmprestimoDTO {
     public EmprestimoDTO(Emprestimo emprestimo) {
         this.id = emprestimo.getId();
         this.dataEmprestimo = emprestimo.getDataEmprestimo();
-        this.dataDevolucao = emprestimo.getDataDevolucao();
     }
 }

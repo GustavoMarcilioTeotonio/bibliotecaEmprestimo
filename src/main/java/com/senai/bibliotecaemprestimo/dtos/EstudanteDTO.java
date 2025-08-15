@@ -9,7 +9,8 @@ public class EstudanteDTO {
     private Long id;
     private String nome;
     private String matricula;
-    private String numero;
+    private String telefone;
+    private String serie;
 
     public EstudanteDTO () {
 
@@ -19,7 +20,9 @@ public class EstudanteDTO {
         this.id = estudante.getId();
         this.nome = estudante.getNome();
         this.matricula = estudante.getMatricula();
-        this.numero = estudante.getNumero();
+        this.telefone = estudante.getTelefone();
+        this.serie = estudante.getSerie();
+
     }
 
 }
