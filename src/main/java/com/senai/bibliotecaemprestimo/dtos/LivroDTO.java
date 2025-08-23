@@ -8,6 +8,8 @@ public class LivroDTO {
 
     private Long id;
     private String nome;
+    private String categoria;
+    private int quantidade;
 
     public LivroDTO () {
 
@@ -16,6 +18,8 @@ public class LivroDTO {
     public LivroDTO (Livro livro) {
         this.id = livro.getId();
         this.nome = livro.getNome();
+        this.categoria = livro.getCategoria();
+        this.quantidade = livro.getQuantidade();
     }
 
 }

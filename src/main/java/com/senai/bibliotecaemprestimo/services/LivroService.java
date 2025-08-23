@@ -25,6 +25,8 @@ public class LivroService {
         Livro livro = new Livro(livroDTO);
         livro.setId(livroDTO.getId());
         livro.setNome(livroDTO.getNome());
+        livro.setCategoria(livroDTO.getCategoria());
+        livro.setQuantidade(livroDTO.getQuantidade());
         return livro;
     }
 
@@ -33,6 +35,8 @@ public class LivroService {
         LivroDTO livroDTO = new LivroDTO();
         livroDTO.setId(livro.getId());
         livroDTO.setNome(livro.getNome());
+        livroDTO.setCategoria(livro.getCategoria());
+        livroDTO.setQuantidade(livroDTO.getQuantidade());
         return livroDTO;
     }
     public Livro buscarLivroPorId(Long id) {

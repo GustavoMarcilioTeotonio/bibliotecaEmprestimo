@@ -4,6 +4,7 @@ import com.senai.bibliotecaemprestimo.dtos.EstudanteDTO;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -37,6 +38,10 @@ public class Estudante {
         this.telefone = estudanteDTO.getTelefone();
         this.serie = estudanteDTO.getSerie();
     }
+
+    @OneToMany(mappedBy = "estudante")
+    private List<Emprestimo> emprestimos = new ArrayList<>();
+
 
 
 

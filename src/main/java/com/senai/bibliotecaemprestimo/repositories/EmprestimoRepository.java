@@ -8,6 +8,6 @@ import java.util.Optional;
 
 @Repository
 public interface EmprestimoRepository extends JpaRepository<Emprestimo, Long> {
-    Optional<Emprestimo> findById(int id);
+    Optional<Emprestimo> findById(Long id);
 }
 

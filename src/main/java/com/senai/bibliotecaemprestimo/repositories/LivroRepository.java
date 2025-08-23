@@ -9,6 +9,6 @@ import java.util.Optional;
 
 @Repository
 public interface LivroRepository extends JpaRepository<Livro, Long> {
-    Optional<Livro> findById(int id);
+    Optional<Livro> findById(Long id);
 }
 

@@ -25,6 +25,9 @@ public class EmprestimoService {
         Emprestimo emprestimo = new Emprestimo(emprestimoDTO);
         emprestimo.setId(emprestimoDTO.getId());
         emprestimo.setDataEmprestimo(emprestimoDTO.getDataEmprestimo());
+        emprestimo.setDevolPrevista(emprestimoDTO.getDevolPrevista());
+        emprestimo.setDataDevol(emprestimoDTO.getDataDevol());
+        emprestimo.setMulta(emprestimoDTO.getMulta());
         return emprestimo;
     }
 
@@ -33,6 +36,9 @@ public class EmprestimoService {
         EmprestimoDTO emprestimoDTO = new EmprestimoDTO();
         emprestimoDTO.setId(emprestimo.getId());
         emprestimoDTO.setDataEmprestimo(emprestimo.getDataEmprestimo());
+        emprestimoDTO.setDevolPrevista(emprestimo.getDevolPrevista());
+        emprestimoDTO.setDataDevol(emprestimo.getDataDevol());
+        emprestimoDTO.setMulta(emprestimo.getMulta());
         return emprestimoDTO;
     }
     public Emprestimo buscarEmprestimoPorId(Long id) {
